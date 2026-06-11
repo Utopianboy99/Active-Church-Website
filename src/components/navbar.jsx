@@ -1,14 +1,18 @@
 // import React from 'react'
 import { Link } from 'react-router-dom'
 import './styles.css'
+import logo from '../../public/TACLogo.svg'
 import DiagonalArrowRightUpOutlineIcon from '@iconify-react/eva/diagonal-arrow-right-up-outline';
+
 
 function Navbar() {
   return (
     <>
       <nav>
 
-        <div id='logo'></div>
+        <div id='logo'>
+          <img src={logo} alt="Active Church Logo" />
+        </div>
 
         <div id='nav-links'>
           <Link to="/">Home</Link>

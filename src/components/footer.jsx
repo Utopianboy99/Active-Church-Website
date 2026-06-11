@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import InstagramFillIcon from '@iconify-react/akar-icons/instagram-fill';
 import YoutubeLineIcon from '@iconify-react/si/youtube-line';
 import MailOutlineIcon from '@iconify-react/material-symbols/mail-outline';
+import logo from '../../public/TACLogo.svg';
 
 
 function Footer() {
@@ -11,7 +12,7 @@ function Footer() {
         <>
             <footer>
                 <div className='foot-logo'>
-
+                    <img src={logo} alt='Active Church logo' className='footer-logo' />
                 </div>
                 <div className='foot-links'>
                     <div className='link-sect'>

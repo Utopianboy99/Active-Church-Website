@@ -8,8 +8,8 @@
 
 nav{
     width:99vw;
-    height:7vh;
-    border:1px solid red;
+    height:8vh;
+    /* border:1px solid red; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -17,15 +17,19 @@ nav{
 }
 
 #logo{
+    margin-top: 1px;
     width:10%;
-    height:80%;
-    border:1px solid red;
+    height:100%;
+    /* border:1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #nav-links{
     width:40%;
     height:100%;
-    border:1px solid red;
+    /* border:1px solid red; */
 
     display: flex;
     align-items: center;
@@ -35,13 +39,29 @@ nav{
 #nav-links a{
     color:black;
     text-decoration: none;
+    /* border:1px solid red; */
+    padding: 1% 2%;
+    border-bottom: 3px solid transparent;
+    transition: border-bottom 0.3s ease;
+}
+
+#nav-links a:hover{
+    border-bottom: 3px solid red;
+}
+
+#nav-links a.active,
+#nav-links a:first-child{
+    color:blue;
+    border-bottom: 3px solid blue;
+
 }
 
 
 #nav-btn{
-    color:black;
+    color:white;
     text-decoration: none;
-    border:1px solid red;
+    /* border:1px solid red; */
+    background-color: blue;
     padding:0% 1.6%;
     border-radius: 50px;
 
@@ -63,15 +83,20 @@ nav{
 footer{
     width:99vw;
     height:100vh;
-    border:1px solid red;
+    /* border:1px solid red; */
 }
 
 .foot-logo, .foot-links{
     width: 100%;
     height: 50%;
-    border:1px solid red
+    /* border:1px solid red */
 }
 
+.foot-logo img{
+    /* border:1px solid red; */
+    height: 99%;
+    width: inherit;
+}
 
 .foot-links{
     display: flex;

@@ -1,5 +1,6 @@
 import './App.css'
-import HomePage from './pages/homePage'
+import HomePage from './pages/HomePage/homePage'
+import logo from '/TACLogo.svg'
 
 function App() {
   return (
