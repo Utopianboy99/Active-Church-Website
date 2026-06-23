@@ -1,5 +1,5 @@
 // import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import './styles.css'
 import logo from '../../public/TACLogo.svg'
 import DiagonalArrowRightUpOutlineIcon from '@iconify-react/eva/diagonal-arrow-right-up-outline';
@@ -15,11 +15,11 @@ function Navbar() {
         </div>
 
         <div id='nav-links'>
-          <Link to="/">Home</Link>
-          <Link to="/sermons">Sermons</Link>
-          <Link to="/events">Events</Link>
-          <Link to="/watch-live">Watch Live</Link>
-          <Link to="/connect">Connect</Link>
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/sermons">Sermons</NavLink>
+          <NavLink to="/events">Events</NavLink>
+          <NavLink to="/watch-live">Watch Live</NavLink>
+          <NavLink to="/connect">Connect</NavLink>
         </div>
 
           <Link to="/new" id='nav-btn'>

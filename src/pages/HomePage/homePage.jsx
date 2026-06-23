@@ -8,8 +8,9 @@ import CalendarIcon from '@iconify-react/iconoir/calendar';
 import PinLineIcon from '@iconify-react/si/pin-line';
 import DiagonalArrowRightUpOutlineIcon from '@iconify-react/eva/diagonal-arrow-right-up-outline';
 import Time4Icon from '@iconify-react/subway/time-4';
-import img3 from '/SnapInsta.to_504806520_18326229370205809_8636710689607754357_n.png'
+import img3 from '/rory.png'
 import logo from '/TACLogo.svg'
+import SermonsCarousel from '../SermonCarousel/Sermonscarousel'
 
 
 function HomePage() {
@@ -80,7 +81,7 @@ function HomePage() {
           </div>
 
           <div>
-            {/* Carousel of the sermons from Youtube */}
+            <SermonsCarousel />
           </div>
         </section>
 
@@ -275,7 +276,7 @@ function HomePage() {
 
           <div>
             <h1 className='intro'>
-              Meet 
+              Meet
               <span className="blue">Our Senior</span><br />
               <b>Pastors</b>
             </h1>

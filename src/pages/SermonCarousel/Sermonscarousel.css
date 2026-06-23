@@ -1,0 +1,213 @@
+/* ===================================================
+SermonsCarousel.css — Homepage carousel for The Active Church
+=================================================== */
+
+.sc-root {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* ── Arrow controls ── */
+.sc-controls {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding-right: 4px;
+}
+
+.sc-arrow {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, opacity 0.2s;
+  flex-shrink: 0;
+}
+
+.sc-arrow svg {
+  width: 18px;
+  height: 18px;
+}
+
+.sc-arrow:hover:not(:disabled) {
+  background: #C89B3C;
+  border-color: #C89B3C;
+}
+
+.sc-arrow:disabled {
+  opacity: 0.25;
+  cursor: default;
+}
+
+/* ── Scrollable track ── */
+.sc-track {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 12px;
+  /* Hide scrollbar */
+  scrollbar-width: none;
+  border:1px solid red;
+}
+.sc-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* ── Card ── */
+.sc-card {
+  flex: 0 0 380px;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: transform 0.25s ease;
+}
+
+.sc-card:hover {
+  transform: translateY(-4px);
+}
+
+/* ── Thumbnail ── */
+.sc-thumb {
+  position: relative;
+  width: 100%;
+  /* aspect-ratio: 30 / 10; */
+  height:100%;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #111;
+}
+
+.sc-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease, filter 0.4s ease;
+  /* border:1px solid red; */
+}
+
+.sc-card:hover .sc-thumb img {
+  transform: scale(1.04);
+  filter: brightness(0.7);
+  /* border:1px solid red;                            */
+}
+
+/* Play button overlay */
+.sc-play {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+.sc-play svg {
+    width: 48px;
+    height: 48px;
+    color: #fff;
+    filter: drop-shadow(0 2px 8px rgba(0,0,0,0.6));
+}
+
+.sc-card:hover .sc-play {
+    opacity: 1;
+}
+
+/* ── Meta text ── */
+.sc-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-height: 80px;
+}
+
+.sc-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: black;
+  margin: 0;
+  /* Clamp to 2 lines */
+  display: -webkit-box;
+  /* -webkit-line-clamp: 2; */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.sc-date {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.45);
+  margin: 0;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* ── Skeleton loader ── */
+.sc-skeleton .sc-thumb {
+  background: #1a1a1a;
+}
+
+.sc-skel-block {
+  animation: sc-shimmer 1.6s ease-in-out infinite;
+  background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%);
+  background-size: 200% 100%;
+}
+
+.sc-skel-line {
+  border-radius: 4px;
+  animation: sc-shimmer 1.6s ease-in-out infinite;
+  background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%);
+  background-size: 200% 100%;
+}
+
+.sc-skel-line--title {
+  height: 14px;
+  width: 90%;
+  margin-bottom: 6px;
+}
+
+.sc-skel-line--date {
+  height: 10px;
+  width: 55%;
+}
+
+@keyframes sc-shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ── Error state ── */
+.sc-error {
+  padding: 40px 20px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9rem;
+}
+
+.sc-error small {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.25);
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .sc-card {
+    flex: 0 0 260px;
+  }
+}
