@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import InstagramFillIcon from '@iconify-react/akar-icons/instagram-fill';
 import YoutubeLineIcon from '@iconify-react/si/youtube-line';
 import MailOutlineIcon from '@iconify-react/material-symbols/mail-outline';
-import logo from '../../public/TACLogo.svg';
+import logo from '/TACLogo.svg';
 
 
 function Footer() {

@@ -58,7 +58,7 @@
 .hero-btm-btns {
     width: 30%;
     height: 30%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -94,7 +94,7 @@
 .about {
     width: 99vw;
     height: 90vh;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -135,7 +135,19 @@
 
 
 
-.ministries,
+.ministries{
+    width: 100%;
+    /* padding: 100px 0; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border:1px solid red; */
+    height:100vh;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
 .connect {
     width: 99vw;
     height: 100vh;
@@ -146,23 +158,24 @@
     align-items: center;
 }
 
-.ministries div:first-child {
+.min-div-one {
     width: 95%;
+    /* margin-bottom: 40px; */
     height: 20%;
-    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    /* border:1px solid red; */
 }
 
-.ministries div:first-child p {
+/* .ministries div:first-child p {
     margin-top: 20px;
     margin-bottom: -20px;
-}
+} */
 
 .head-box {
     /* border: 1px solid red; */
-    height: 40%;
+    height: 50%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -184,10 +197,13 @@
     text-decoration: none;
 }
 
-.ministries div:last-child {
+.min-div-two {
     width: 100%;
-    height: 80%;
-    /* border: 1px solid blue; */
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 #top {

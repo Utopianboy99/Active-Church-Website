@@ -84,12 +84,12 @@ function ConnectPage() {
             <label htmlFor=""> Phone Number <br />
               <input type="text" placeholder='067 654 3219'/>
             </label>
-            <label htmlFor=""> Message <br />
+            <label htmlFor="" id='fieldset'> Message <br />
               <fieldset aria-placeholder='Tell us more...'>
 
               </fieldset>
             </label>
-            <Link to=' '>
+            <Link to=' ' id='frm-btn'>
               Send Message <SendIcon height='1.3em'/>
             </Link>
           </form>

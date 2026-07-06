@@ -1,7 +1,7 @@
 // import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import './styles.css'
-import logo from '../../public/TACLogo.svg'
+import logo from '/TACLogo.svg'
 import DiagonalArrowRightUpOutlineIcon from '@iconify-react/eva/diagonal-arrow-right-up-outline';
 
 

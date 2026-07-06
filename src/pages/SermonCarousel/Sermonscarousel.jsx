@@ -87,7 +87,7 @@ export default function SermonsCarousel() {
   return (
     <div className="sc-root">
       {/* Nav arrows */}
-      <div className="sc-controls">
+      {/* <div className="sc-controls">
         <button
           className="sc-arrow"
           onClick={() => scroll(-1)}
@@ -108,7 +108,7 @@ export default function SermonsCarousel() {
             <path d="M9 18l6-6-6-6" />
           </svg>
         </button>
-      </div>
+      </div> */}
 
       {/* Track */}
       <div
