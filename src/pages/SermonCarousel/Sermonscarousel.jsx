@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
-import './SermonsCarousel.css'
+import './Sermonscarousel.css'
 
 const API_KEY = import.meta.env.VITE_YOUTUBE_API_KEY
 const CHANNEL_ID = import.meta.env.VITE_YOUTUBE_CHANNEL_ID || 'UC2sj_jlpxpaR1lbUKZpirRg'
