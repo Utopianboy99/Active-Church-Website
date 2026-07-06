@@ -152,7 +152,7 @@ export default function WatchLivePage() {
                 All our services are recorded and available in our <br />
                 sermon archive.
               </p>
-              <Link to=''>Browse Sermon <br /> <DiagonalArrowRightUpOutlineIcon height='1.2em' /> </Link>
+              <Link to='/sermons'>Browse Sermon <br /> <DiagonalArrowRightUpOutlineIcon height='1.2em' /> </Link>
 
             </div>
           </div>

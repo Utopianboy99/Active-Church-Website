@@ -230,7 +230,7 @@ function SermonsPage() {
           {!loading && !error && sermons.length > 0 && (
             <div className="sermons-cta">
               <a
-                href={`https://www.youtube.com/channel/@TheActiveChurch`}
+                href={`https://www.youtube.com/@TheActiveChurch`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="sermons-cta__link"
