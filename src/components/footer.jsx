@@ -33,15 +33,15 @@ function Footer() {
 
                             </div>
                             <div className='left-box-links'>
-                                <div className='social-links'>
+                                <Link to='https://www.instagram.com/theactivechurch_/' className='social-links'>
                                     <InstagramFillIcon height="2em" />
-                                </div>
-                                <div className='social-links'>
+                                </Link>
+                                <Link to='https://www.youtube.com/@TheActiveChurch' className='social-links'>
                                     <YoutubeLineIcon height="2em" />
-                                </div>
-                                <div className='social-links'>
+                                </Link>
+                                <Link to='/connect' className='social-links'>
                                     <MailOutlineIcon height="2em" />
-                                </div>
+                                </Link>
                             </div>
 
                         </div>

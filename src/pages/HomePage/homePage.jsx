@@ -34,11 +34,11 @@ function HomePage() {
               </p>
             </div>
             <div className='hero-btm-btns'>
-              <Link to=''>
+              <Link to='/connect'>
                 Join the Movement
                 <ArrowRightOutlineIcon height="1em" />
               </Link>
-              <Link to='/service'>
+              <Link to='/watch-live'>
                 Watch Live
               </Link>
             </div>
@@ -205,7 +205,7 @@ function HomePage() {
                 community waiting and a purpose only you can fulfill.
               </p>
 
-              <Link>
+              <Link to='/connect'>
                 Plan Your Visit
                 <DiagonalArrowRightUpOutlineIcon height="1.4em" />
               </Link>
@@ -258,11 +258,11 @@ function HomePage() {
               In fact it is Active everywhere.
             </p>
             <div className="mid-box-btns">
-              <Link>
+              <Link to='/connect'>
                 I'm Ready
 
               </Link>
-              <Link>
+              <Link to='watch-live'>
                 Watch online
               </Link>
             </div>
