@@ -8,8 +8,9 @@ import CalendarIcon from '@iconify-react/iconoir/calendar';
 import PinLineIcon from '@iconify-react/si/pin-line';
 import DiagonalArrowRightUpOutlineIcon from '@iconify-react/eva/diagonal-arrow-right-up-outline';
 import Time4Icon from '@iconify-react/subway/time-4';
-import img3 from '/SnapInsta.to_504806520_18326229370205809_8636710689607754357_n.png'
+import img3 from '/rory.png'
 import logo from '/TACLogo.svg'
+import SermonsCarousel from '../SermonCarousel/Sermonscarousel'
 
 
 function HomePage() {
@@ -20,7 +21,7 @@ function HomePage() {
         <section className="hero">
           <div className='hero-txt-main'>
             <h1>
-              Wlecome to <br />
+              Welcome to <br />
               The Active Church
             </h1>
           </div>
@@ -34,7 +35,7 @@ function HomePage() {
             </div>
             <div className='hero-btm-btns'>
               <Link to=''>
-                Join the Movemeent
+                Join the Movement
                 <ArrowRightOutlineIcon height="1em" />
               </Link>
               <Link to='/service'>
@@ -49,7 +50,7 @@ function HomePage() {
 
             <h1>
               We are a nation within the <br />
-              nation of <span className='blue'>Soutn Africa.</span> <br />
+              nation of <span className='blue'>South Africa.</span> <br />
               We are the nation that <br />
               belongs to the <span className='blue'>Kingdom of </span><br />
               <span className='blue'>God.</span> We are Actively  <br />
@@ -62,7 +63,7 @@ function HomePage() {
         </section>
 
         <section className="ministries">
-          <div>
+          <div className='min-div-one'>
 
             <p className='red'>THE ARCHIVES</p>
 
@@ -79,8 +80,8 @@ function HomePage() {
 
           </div>
 
-          <div>
-            {/* Carousel of the sermons from Youtube */}
+          <div className='min-div-two'>
+            <SermonsCarousel />
           </div>
         </section>
 
@@ -275,7 +276,7 @@ function HomePage() {
 
           <div>
             <h1 className='intro'>
-              Meet 
+              Meet
               <span className="blue">Our Senior</span><br />
               <b>Pastors</b>
             </h1>
