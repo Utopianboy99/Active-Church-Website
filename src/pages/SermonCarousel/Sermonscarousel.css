@@ -208,7 +208,31 @@ SermonsCarousel.css — Homepage carousel for The Active Church
 
 /* ── Responsive ── */
 @media (max-width: 640px) {
+  .sc-root {
+    height: auto;
+    min-height: 400px;
+  }
+
+  .sc-track {
+    height: auto;
+    padding-bottom: 1rem;
+  }
+
   .sc-card {
     flex: 0 0 260px;
+  }
+
+  .sc-thumb {
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .sc-meta {
+    min-height: auto;
+    padding: 12px 5px;
+  }
+
+  .sc-title {
+    font-size: 1rem;
   }
 }

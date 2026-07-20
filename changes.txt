@@ -1,0 +1,1553 @@
+$ git diff --no-color 2>&1
+...
+
+    font-size: clamp(2.5rem, 6vw, 5em);
+ }
+ 
+ .st-div-p2{
+-    font-size: 1.5em;
++    font-size: clamp(1rem, 2vw, 1.5em);
+ }
+ 
+ .st-divs-right a{
+-    /* border:1px solid red; */
+     display: flex;
+     align-items: center;
+-    width: 28%;
+-    height: 10%;
+-    justify-content: space-around;
+-    padding: 2%;
++    width: auto;
++    min-width: 180px;
++    height: auto;
++    justify-content: center;
++    padding: 0.75rem 1.5rem;
+     border-radius: 50px;
+     color: white;
+     background-color: blue;
++    text-decoration: none;
++    gap: 0.5rem;
++    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+ }
+ 
+ 
+@@ -437,47 +484,45 @@
+ 
+ 
+ .giving-sect{
+-    width:99vw;
+-    height: 100vh;
+-    /* border:1px solid red; */
++    width: 100%;
++    min-height: auto;
+     display: flex;
+     align-items: center;
+     justify-content: space-evenly;
++    padding: 4rem 1rem;
+ }
+ 
+ .give-divs{
+-    width:48%;
+-    height:95%;
+-    /* border:1px solid red; */
++    width: 48%;
++    height: auto;
+ }
+ 
+ .left{
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+-    padding-left:2%;
+-    height: 85%;
++    padding-left: 2%;
++    height: auto;
++    gap: 1rem;
+ }
+ 
+ .left h1{
+-    font-size: 4.5em;
++    font-size: clamp(2.5rem, 5vw, 4.5em);
+ }
+ 
+ .give-blue-div{
+-    /* border:1px solid red; */
+-    height:50%;
+-    width:80%;
++    height: auto;
++    width: 100%;
++    max-width: 600px;
+     border-radius: 30px;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+-}
+-
+-.give-blue-div{
+-    font-size: 1.7em;
+-    color:white;
++    gap: 1rem;
++    font-size: clamp(1rem, 2vw, 1.7em);
++    color: white;
+     background-color: blue;
+-    padding: 0 4%;
++    padding: 2rem;
+ }
+ 
+ 
+@@ -486,65 +531,75 @@
+ 
+ 
+ .the-2nd-last{
+-    width:99vw;
+-    height: 100vh;
+-    /* border:1px solid red; */
++    width: 100%;
++    min-height: auto;
+     display: flex;
+     align-items: center;
+     justify-content: center;
++    padding: 4rem 1rem;
+ }
+ 
+ .mid-box{
+-    /* border:1px solid red; */
+     text-align: center;
+-    height: 80%;
++    height: auto;
++    display: flex;
++    flex-direction: column;
++    justify-content: center;
++    gap: 1rem;
+ }
+ 
+ .min-box-h1{
+-    font-size: 8em;
++    font-size: clamp(3rem, 8vw, 7em);
+     text-align: center;
++    line-height: 1.2;
++    overflow: hidden;
+ }
+ 
+ .txt-space{
+-    letter-spacing: 0.4em;
++    letter-spacing: 0.2em;
+     font-weight: 100;
+ }
+ 
+ .min-box-p{
+-    font-size: 2em;
++    font-size: clamp(1rem, 2.5vw, 2em);
+     margin: 10px 0px;
+ }
+ 
+ .mid-box-btns{
+     margin-top: 30px;
+-    /* border:1px solid red; */
+-    height: 15%;
++    height: auto;
+     display: flex;
+     align-items: center;
+-    padding: 0px 15%;
+-    justify-content: space-around;
++    padding: 0;
++    justify-content: center;
++    gap: 1rem;
++    flex-wrap: wrap;
+ }
+ 
+ .mid-box-btns a{
+-    /* border:1px solid red; */
+-    width:35%;
+-    height: 70%;
++    width: auto;
++    min-width: 180px;
++    height: auto;
+     display: flex;
+     align-items: center;
+-    justify-content: space-around;
++    justify-content: center;
++    padding: 0.75rem 1.5rem;
+     border-radius: 50px;
+     text-decoration: none;
++    gap: 0.5rem;
++    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+ }
+ 
+ .mid-box-btns a:first-child{
+     background-color: blue;
+     color: white;
++    font-size: clamp(0.9rem, 1.5vw, 1.3em);
+ }
+ 
+ .mid-box-btns a:last-child{
+-    border:1px solid black;
+-    color:black;
+-    font-size: 1.3em;
++    border: 1px solid black;
++    color: black;
++    font-size: clamp(0.9rem, 1.5vw, 1.3em);
+     font-weight: 700;
+ }
+ 
+@@ -554,23 +609,24 @@
+ 
+ 
+ .our-pastors{
+-    width:99vw;
+-    height:130vh;
+-    /* border:1px solid red; */
++    width: 100%;
++    min-height: auto;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: space-around;
+     text-align: center;
++    padding: 4rem 1rem;
+ }
+ 
+ .intro{
+-    font-size: 6em;
++    font-size: clamp(2.5rem, 8vw, 6em);
+ }
+ 
+ .pastors{
+-    width:80%;
+-    height: 60%;
++    width: min(90%, 800px);
++    height: auto;
++    min-height: 400px;
+     border-radius: 30px;
+     background-image: url('/ourPastors.png');
+     background-position: center;
+@@ -580,7 +636,418 @@
+ }
+ 
+ .ps-txt{
+-    font-size: 2.1em;
+-    /* border:1px solid red; */
+-    /* padding: 1% 0px; */
++    font-size: clamp(1.1rem, 2.5vw, 2.1em);
++}
++
++/* Responsive home page adjustments */
++@media (max-width: 1200px) {
++  .hero,
++  .about,
++  .ministries,
++  .connect,
++  .nxt-steps,
++  .giving-sect,
++  .the-2nd-last,
++  .our-pastors {
++    width: 100%;
++    min-height: auto;
++    padding-left: 1rem;
++    padding-right: 1rem;
++  }
++
++  .hero-txt-main,
++  .hero-botom,
++  .about div:first-child,
++  .min-div-one,
++  .min-div-two,
++  .count-left-mid,
++  .st-divs,
++  .give-divs,
++  .left,
++  .mid-box {
++    width: 100%;
++  }
++
++  .hero-txt-main h1 {
++    font-size: clamp(3.5rem, 6vw, 5.5rem);
++  }
++
++  .hero-btm-text p {
++    font-size: 1.25rem;
++  }
++
++  .hero-btm-btns {
++    width: 100%;
++    flex-wrap: wrap;
++    gap: 1rem;
++  }
++
++  .hero-btm-btns a {
++    width: auto;
++    min-width: 160px;
++    padding: 1rem 1.25rem;
++  }
++
++  .about h1,
++  .head-box h1,
++  .st-div-h1,
++  .give-heading,
++  .min-box-h1,
++  .intro {
++    font-size: clamp(2.5rem, 5vw, 4.5rem);
++  }
++
++  .bout-elvine {
++    position: relative;
++    left: 0;
++    width: 100%;
++    height: 320px;
++    margin-top: 2rem;
++  }
++
++  .nxt-steps {
++    flex-direction: column;
++    height: auto;
++    padding-top: 2rem;
++    gap: 2rem;
++  }
++
++  .st-divs {
++    width: 100%;
++    height: auto;
++    margin-bottom: 0;
++  }
++
++  .st-div-left {
++    width: 100%;
++    min-height: 320px;
++  }
++
++  .left-float-div {
++    position: static;
++    width: 90%;
++    height: auto;
++    margin: -2rem auto 0;
++    padding: 1.5rem;
++  }
++
++  #side-div {
++    flex-direction: column;
++    align-items: center;
++    justify-content: flex-start;
++  }
++
++  #right,
++  #left {
++    width: 100%;
++    height: auto;
++  }
++
++  #right {
++    min-height: 320px;
++  }
++
++  #right-txt-box,
++  .min-box,
++  .left-img {
++    width: 100%;
++  }
++
++  .min-box {
++    flex-direction: row;
++    gap: 1rem;
++    padding: 1rem;
++  }
++
++  .min-box-img {
++    width: 22%;
++    min-width: 100px;
++    height: 100px;
++  }
++
++  .day-times,
++  .mid-box-btns {
++    flex-direction: column;
++    align-items: stretch;
++  }
++
++  .st-divs,
++  .st-divs.right,
++  .give-divs,
++  .mid-box,
++  .our-pastors {
++    width: 100%;
++  }
++
++  .st-divs-right a,
++  .mid-box-btns a {
++    width: 100%;
++    justify-content: center;
++  }
++
++  .giving-sect,
++  .the-2nd-last,
++  .our-pastors {
++    flex-direction: column;
++    gap: 2rem;
++    align-items: center;
++  }
++}
++
++@media (max-width: 900px) {
++  .hero {
++    min-height: auto;
++    padding: 3rem 1rem;
++  }
++
++  .about,
++  .ministries,
++  .connect,
++  .nxt-steps,
++  .giving-sect,
++  .the-2nd-last,
++  .our-pastors {
++    padding: 2rem 1rem;
++  }
++
++  .connect-h1,
++  .blue,
++  .st-div-p2,
++  .ps-txt,
++  .give-head-txt {
++    font-size: clamp(1rem, 2vw, 1.4rem);
++  }
++
++  .count-left-mid,
++  .day-times,
++  .mid-box-btns {
++    gap: 1rem;
++  }
++
++  .mid-cards {
++    flex-direction: column;
++    align-items: stretch;
++  }
++}
++
++@media (max-width: 640px) {
++  .hero-txt-main h1,
++  .about h1,
++  .head-box h1,
++  .st-div-h1,
++  .give-heading,
++  .min-box-h1,
++  .intro {
++    font-size: clamp(2.25rem, 10vw, 3.5rem);
++  }
++
++  .hero{
++    display: flex;
++    align-items: center;
++    flex-direction: column;
++    margin: 0;
++    padding-bottom: 40px;
++    justify-content: center;
++  }
++  
++  .hero-txt-main h1{
++    line-height: 1.2;
++    width: 100%;
++    display: flex;
++    align-items: center;
++    justify-content: center;
++    text-align: center;
++    font-size: 1.8em;
++  }
++
++  .hero-botom{
++    height: auto;
++    display: flex;
++    flex-direction: column;
++    align-items: center;
++    justify-content: space-around;
++    gap: 1rem;
++  }
++
++  .hero-btm-text{
++    width: 100%;
++    text-align: center;
++    display: flex;
++    align-items: center;
++    justify-content: center;
++  }
++
++  .hero-btm-btns{
++    width: 100%;
++    display: flex;
++    flex-direction: column;
++    align-items: center;
++    gap: 0.75rem;
++  }
++
++  .hero-btm-btns a{
++    width: auto;
++    min-width: 160px;
++    padding: 0.75rem 1.25rem;
++    font-size: 0.95rem;
++    display: flex;
++    align-items: center;
++    justify-content: center;
++  }
++
++  .hero-btm-btns a:last-child{
++    color: white;
++  }
++
++  .abt-containor-div{
++    display: flex;
++    flex-direction: column;
++  }
++
++  .abt-containor-div h1 {
++    font-size: 1.6em;
++    width: 100%;
++    height: auto;
++    text-align: center;
++  }
++
++  .abt-containor-div span{
++    font-size: 1em;
++  }
++
++  .min-div-one{
++    height: auto;
++  }
++
++  .head-box{
++    font-size: 1em;
++    height: auto;
++    display: flex;
++    flex-direction: column;
++    gap: 0.75rem;
++  }
++
++  .head-box a{
++    width: auto;
++    min-width: 160px;
++    padding: 0.5rem 1rem;
++  }
++
++  .connect{
++    display: flex;
++    flex-direction: column;
++    height: auto;
++  }
++
++  #top{
++    height: auto;
++    display: flex;
++    flex-direction: column;
++    justify-content: center;
++    gap: 0.75rem;
++  }
++
++  .connect-h1{
++    margin: 0;
++  }
++
++  #top a{
++    padding: 0.5rem 1rem;
++    width: auto;
++    min-width: 140px;
++    height: auto;
++  }
++
++  #right-txt-box{
++    margin: 15px 0px;
++    height: auto;
++    padding: 20px 0px;
++    display: flex;
++    flex-direction: column;
++    justify-content: space-around;
++  }
++
++  #ths-week{
++    font-size: 1em;
++    width: auto;
++    padding: 0.25rem 0.75rem;
++  }
++
++  #right-txt-box h2{
++    font-size: 1.5em;
++  }
++
++  #locate{
++    font-size: 0.8em;
++  }
++
++  .min-box{
++    width: 100%;
++    height: auto;
++    min-height: 100px;
++    overflow: hidden;
++    margin: 10px 0px;
++  }
++  
++  .min-box-img{
++    width: 80px;
++    height: 80px;
++    flex-shrink: 0;
++  }
++  
++  .min-box-txt h4{
++    font-size: 1em;
++  }
++  
++  .min-box-txt p{
++    font-size: 14px;
++  }
++  
++  .st-div-left{
++    display: flex;
++    flex-direction: column;
++    align-items: center;
++  }
++
++  .left-float-div{
++    position: static;
++    width: 90%;
++    height: auto;
++    margin: -2rem auto 0;
++    padding: 1.5rem;
++    display: block;
++    z-index: 1;
++  }
++
++  .right{
++    height: auto;
++  }
++
++  .hero-botom,
++  .head-box,
++  .count-left-mid,
++  .day-times,
++  .mid-box-btns {
++    flex-direction: column;
++    align-items: stretch;
++  }
++
++  .hero-btm-btns a,
++  .mid-box-btns a {
++    width: 100%;
++  }
++
++  .min-box-img {
++    width: 80px;
++    height: 80px;
++    flex-shrink: 0;
++  }
++
++  .left-float-div {
++    position: static;
++    padding: 1rem;
++    width: 100%;
++    height: auto;
++    margin: 1rem 0 0;
++  }
+ }
+\ No newline at end of file
+diff --git a/src/pages/SermonCarousel/Sermonscarousel.css b/src/pages/SermonCarousel/Sermonscarousel.css
+index 2d77668..b70d06b 100644
+--- a/src/pages/SermonCarousel/Sermonscarousel.css
++++ b/src/pages/SermonCarousel/Sermonscarousel.css
+@@ -6,7 +6,8 @@ SermonsCarousel.css — Homepage carousel for The Active Church
+   position: relative;
+   width: 100%;
+   overflow: hidden;
+-  height: 70%;
++  height: auto;
++  min-height: 400px;
+ }
+ 
+ /* ── Arrow controls ── */
+@@ -54,12 +55,9 @@ SermonsCarousel.css — Homepage carousel for The Active Church
+   gap: 20px;
+   overflow-x: auto;
+   scroll-snap-type: x mandatory;
+-  /* -webkit-overflow-scrolling: touch; */
+-  /* padding-bottom: 12px; */
+-  /* Hide scrollbar */
+   scrollbar-width: none;
+-  height: 80%;
+-  /* background-color: black; */
++  height: auto;
++  padding-bottom: 1rem;
+ }
+ 
+ .sc-track::-webkit-scrollbar {
+@@ -89,7 +87,8 @@ SermonsCarousel.css — Homepage carousel for The Active Church
+ .sc-thumb {
+   position: relative;
+   width: 100%;
+-  height: 280px;
++  height: auto;
++  aspect-ratio: 16 / 9;
+   border-radius: 18px;
+   overflow: hidden;
+ }
+@@ -211,4 +210,18 @@ SermonsCarousel.css — Homepage carousel for The Active Church
+   .sc-card {
+     flex: 0 0 260px;
+   }
++
++  .sc-thumb {
++    height: auto;
++    aspect-ratio: 16 / 9;
++  }
++
++  .sc-meta {
++    min-height: auto;
++    padding: 12px 5px;
++  }
++
++  .sc-title {
++    font-size: 1rem;
++  }
+ }
+\ No newline at end of file
+diff --git a/src/pages/SerrmonPage/sermonStyles.css b/src/pages/SerrmonPage/sermonStyles.css
+index ecea371..3fb3040 100644
+--- a/src/pages/SerrmonPage/sermonStyles.css
++++ b/src/pages/SerrmonPage/sermonStyles.css
+@@ -1,20 +1,17 @@
+-/* ─── Page shell ─────────────────────────────────────────────────────────────── */
+ .sermons-page {
+   background-color: #eae9e4;
+-  color: #ffffff;
++  color: #111;
+   min-height: 100vh;
+ }
+ 
+-/* ─── Intro / Hero ───────────────────────────────────────────────────────────── */
+ .sermons-intro {
+-  padding: 5rem 1rem 1rem;
+-  /* border-bottom: 1px solid #1c1c1c; */
++  padding: 5rem 1.5rem 1rem;
+ }
+ 
+ .sermons-intro__inner {
+-  width:99% ;
+-  /* border:1px solid red; */
+-  margin-left:4.5%;
++  width: min(100%, 1100px);
++  margin-left: auto;
++  margin-right: auto;
+ }
+ 
+ .sermons-eyebrow {
+@@ -31,7 +28,6 @@
+   font-size: clamp(3rem, 8vw, 6rem);
+   font-weight: 300;
+   letter-spacing: -0.03em;
+-  line-height: 1;
+   margin: 0 0 1.5rem;
+   color: black;
+ }
+@@ -40,16 +36,15 @@
+   font-size: 1.05rem;
+   color: black;
+   line-height: 1.7;
+-  max-width: 540px;
++  max-width: 560px;
+   margin: 0 0 2.5rem;
+ }
+ 
+-/* ─── Search ─────────────────────────────────────────────────────────────────── */
+ .sermons-search {
+   position: relative;
+   display: flex;
+   align-items: center;
+-  max-width: 480px;
++  max-width: 100%;
+   border-radius: 50px;
+ }
+ 
+@@ -65,15 +60,13 @@
+ 
+ .sermons-search__input {
+   width: 100%;
+-  /* background: #111; */
+   border: 1px solid #2a2a2a;
+   border-radius: 50px;
+   padding: 0.85rem 2.8rem 0.85rem 2.8rem;
+-  font-size: 0.9rem;
++  font-size: 0.95rem;
+   color: black;
+   outline: none;
+   transition: border-color 0.25s ease;
+-  /* remove browser default search styling */
+   -webkit-appearance: none;
+   appearance: none;
+ }
+@@ -86,7 +79,6 @@
+   border-color: #C89B3C;
+ }
+ 
+-/* Clear × button */
+ .sermons-search__clear {
+   position: absolute;
+   right: 1rem;
+@@ -101,24 +93,21 @@
+ }
+ 
+ .sermons-search__clear:hover {
+-  color: #fff;
++  color: #111;
+ }
+ 
+-/* ─── Grid section ───────────────────────────────────────────────────────────── */
+ .sermons-grid-section {
+   max-width: 1200px;
+   margin: 0 auto;
+-  padding: 5rem 2rem 6rem;
+-  /* border:1px solid red; */
++  padding: 5rem 1.5rem 6rem;
+ }
+ 
+ .sermons-grid {
+   display: grid;
+-  grid-template-columns: repeat(3, 1fr);
++  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+   gap: 1.5rem;
+ }
+ 
+-/* ─── Card ───────────────────────────────────────────────────────────────────── */
+ .sermon-card {
+   display: flex;
+   flex-direction: column;
+@@ -136,15 +125,15 @@
+   transform: translateY(-4px);
+ }
+ 
+-/* Featured card — full width, side-by-side layout */
+ .sermon-card--featured {
+   grid-column: 1 / -1;
+   flex-direction: row;
++  gap: 1rem;
+ }
+ 
+ .sermon-card--featured .sermon-card__thumb {
+   flex: 0 0 56%;
+-  aspect-ratio: unset;
++  aspect-ratio: 16 / 9;
+   max-height: 380px;
+ }
+ 
+@@ -163,7 +152,6 @@
+   line-height: 1.3;
+ }
+ 
+-/* ─── Thumbnail ──────────────────────────────────────────────────────────────── */
+ .sermon-card__thumb {
+   position: relative;
+   aspect-ratio: 16 / 9;
+@@ -189,7 +177,6 @@
+   background: #1a1a1a;
+ }
+ 
+-/* Play overlay */
+ .sermon-card__play {
+   position: absolute;
+   inset: 0;
+@@ -214,7 +201,6 @@
+   padding: 11px;
+ }
+ 
+-/* Duration badge */
+ .sermon-card__duration {
+   position: absolute;
+   bottom: 0.6rem;
+@@ -229,7 +215,6 @@
+   backdrop-filter: blur(4px);
+ }
+ 
+-/* ─── Card body ──────────────────────────────────────────────────────────────── */
+ .sermon-card__body {
+   padding: 1.25rem;
+   display: flex;
+@@ -258,7 +243,44 @@
+   font-size: 0.83rem;
+   color: #666;
+   line-height: 1.6;
+-  margin: 0;
++}
++
++@media (max-width: 900px) {
++  .sermons-grid-section {
++    padding: 4rem 1rem 5rem;
++  }
++
++  .sermon-card--featured {
++    flex-direction: column;
++  }
++
++  .sermon-card--featured .sermon-card__thumb {
++    flex: none;
++    width: 100%;
++    max-height: 420px;
++  }
++
++  .sermon-card--featured .sermon-card__body {
++    padding: 2rem;
++  }
++}
++
++@media (max-width: 640px) {
++  .sermons-intro {
++    padding: 3rem 1rem 1rem;
++  }
++
++  .sermons-heading {
++    font-size: clamp(2.5rem, 10vw, 4.2rem);
++  }
++
++  .sermons-subheading {
++    max-width: 100%;
++  }
++
++  .sermons-grid {
++    gap: 1rem;
++  }
+ }
+ 
+ .sermon-card__link {
+@@ -408,7 +430,7 @@
+ 
+ @media (max-width: 600px) {
+   .sermons-intro {
+-    padding: 7rem 1.25rem 3.5rem;
++    padding: 3rem 1.25rem 1rem;
+   }
+ 
+   .sermons-grid-section {
+@@ -426,4 +448,12 @@
+   .sermons-search {
+     max-width: 100%;
+   }
++
++  .sermon-card__title {
++    font-size: 0.85rem;
++  }
++
++  .sermon-card__body {
++    padding: 1rem;
++  }
+ }
+\ No newline at end of file
+diff --git a/src/pages/WatchLive/WatchLivePage.jsx b/src/pages/WatchLive/WatchLivePage.jsx
+index bc772ff..10c8ae5 100644
+--- a/src/pages/WatchLive/WatchLivePage.jsx
++++ b/src/pages/WatchLive/WatchLivePage.jsx
+@@ -152,7 +152,7 @@ export default function WatchLivePage() {
+                 All our services are recorded and available in our <br />
+                 sermon archive.
+               </p>
+-              <Link to='/sermons'>Browse Sermon <br /> <DiagonalArrowRightUpOutlineIcon height='1.2em' /> </Link>
++              <Link to='/sermons'>Browse Sermon <DiagonalArrowRightUpOutlineIcon height='1.5em' /> </Link>
+ 
+             </div>
+           </div>
+diff --git a/src/pages/WatchLive/WatchLiveStyles.css b/src/pages/WatchLive/WatchLiveStyles.css
+index f453121..86bdfc3 100644
+--- a/src/pages/WatchLive/WatchLiveStyles.css
++++ b/src/pages/WatchLive/WatchLiveStyles.css
+@@ -1,307 +1,352 @@
+-.watch-live-section{
+-    /* border:1px solid red; */
+-    height:200vh
++.watch-live-section {
++  width: 100%;
++  min-height: 100vh;
++  padding: 0;
++  background-color: #eae9e4;
++
+ }
+ 
+ .wl-intro {
+-    padding: 5rem 1rem 1rem;
+-    /* border-bottom: 1px solid #1c1c1c; */
++  padding: 5rem 5% 1rem;
+ }
+ 
+ .wl-intro__inner {
+-    width: 99%;
+-    /* border:1px solid red; */
+-    margin-left: 4.5%;
++  max-width: 980px;
+ }
+ 
+ .wl-eyebrow {
+-    display: inline-block;
+-    font-size: 0.68rem;
+-    font-weight: 600;
+-    letter-spacing: 0.22em;
+-    text-transform: uppercase;
+-    color: blue;
+-    margin-bottom: 1.25rem;
++  display: inline-block;
++  font-size: 0.68rem;
++  font-weight: 600;
++  letter-spacing: 0.22em;
++  text-transform: uppercase;
++  color: blue;
++  margin-bottom: 1.25rem;
+ }
+ 
+ .wl-heading {
+-    font-size: clamp(3rem, 8vw, 6rem);
+-    font-weight: 300;
+-    letter-spacing: -0.03em;
+-    line-height: 1;
+-    margin: 0 0 1.5rem;
+-    color: black;
++  font-size: clamp(3rem, 8vw, 6rem);
++  font-weight: 300;
++  letter-spacing: -0.03em;
++  /* line-height: 1; */
++  margin: 0 0 1.5rem;
++  color: black;
+ }
+ 
+ .wl-subheading {
+-    font-size: 1.05rem;
+-    color: black;
+-    line-height: 1.7;
+-    max-width: 540px;
+-    margin: 0 0 2.5rem;
++  font-size: 1.05rem;
++  color: black;
++  line-height: 1.7;
++  max-width: 540px;
++  margin: 0 0 2.5rem;
+ }
+ 
+-.wl-timer-sect{
+-    width:100%;
+-    height:78%;
+-    display: flex;
+-    flex-direction: column;
+-    align-items: center;
+-    justify-content: space-around;
++.wl-timer-sect {
++  width: 100%;
++  display: flex;
++  flex-direction: column;
++  align-items: center;
++  gap: 2rem;
++  padding-bottom: 4rem;
+ }
+ 
+-.cnt-dwn-timer{
+-    /* border:1px solid red; */
+-    width:90%;
+-    height:65%;
+-    display: flex;
+-    align-items: center;
+-    justify-content: center;
+-    /* border:1px solid red; */
++.cnt-dwn-timer {
++  width: 100%;
++  max-width: 1100px;
++  display: flex;
++  align-items: center;
++  justify-content: center;
+ }
+ 
+ .cnt-dwn-timer-blk {
+-    display: flex;
+-    align-items: center;
+-    justify-content: center;
+-    /* border:1px solid red; */
+-    width:90%;
+-    height:90%;
+-    background-image: url('/Thumbnail.png');
+-    background-repeat: no-repeat;
+-    background-size: cover;
+-    border-radius: 40px;
+-  }
+-  
+-  /* --- Live state --- */
+-  .live-state {
+-      display: flex;
+-      flex-direction: column;
+-      align-items: center;
+-      gap: 1.25rem;
+-    }
+-    
+-    .live-badge {
+-        display: inline-flex;
+-        align-items: center;
+-        gap: 8px;
+-        background: #fee2e2;
+-    color: #b91c1c;
+-    font-size: 0.78rem;
+-    font-weight: 600;
+-    letter-spacing: 0.12em;
+-    text-transform: uppercase;
+-    padding: 6px 14px;
+-    border-radius: 999px;
++  width: 100%;
++  min-height: 420px;
++  display: flex;
++  align-items: center;
++  justify-content: center;
++  background-image: url('/Thumbnail.png');
++  background-repeat: no-repeat;
++  background-size: cover;
++  background-position: center;
++  border-radius: 40px;
++  padding: 3rem;
++}
++
++.live-state {
++  display: flex;
++  flex-direction: column;
++  align-items: center;
++  gap: 1.25rem;
++  width: 100%;
++  max-width: 660px;
++}
++
++.live-badge {
++  display: inline-flex;
++  align-items: center;
++  gap: 8px;
++  background: #fee2e2;
++  color: #b91c1c;
++  font-size: 0.78rem;
++  font-weight: 600;
++  letter-spacing: 0.12em;
++  text-transform: uppercase;
++  padding: 6px 14px;
++  border-radius: 999px;
+ }
+ 
+ .live-dot {
+-    width: 8px;
+-    height: 8px;
+-    border-radius: 50%;
+-    background: #ef4444;
+-    animation: pulse 1.4s ease-in-out infinite;
++  width: 8px;
++  height: 8px;
++  border-radius: 50%;
++  background: #ef4444;
++  animation: pulse 1.4s ease-in-out infinite;
+ }
+ 
+ @keyframes pulse {
+-    0%, 100% { opacity: 1; transform: scale(1); }
+-    50%       { opacity: 0.4; transform: scale(0.75); }
++  0%, 100% { opacity: 1; transform: scale(1); }
++  50%      { opacity: 0.4; transform: scale(0.75); }
+ }
+ 
+ .live-label {
+-    font-size: clamp(1.4rem, 3vw, 2rem);
+-    font-weight: 300;
+-    letter-spacing: -0.02em;
+-    margin: 0;
+-    color: black;
++  font-size: clamp(1.4rem, 3vw, 2rem);
++  font-weight: 300;
++  letter-spacing: -0.02em;
++  margin: 0;
++  color: black;
++  text-align: center;
+ }
+ 
+ .join-btn {
+-    display: inline-flex;
+-    align-items: center;
+-    gap: 6px;
+-    background: blue;
+-    color: white;
+-    text-decoration: none;
+-    font-size: 0.95rem;
+-    font-weight: 500;
+-    padding: 12px 28px;
+-    border-radius: 999px;
+-    transition: opacity 0.15s;
+-}
+-
+-.join-btn:hover { opacity: 0.85; }
+-
+-/* --- Countdown state --- */
++  display: inline-flex;
++  align-items: center;
++  gap: 6px;
++  background: blue;
++  color: white;
++  text-decoration: none;
++  font-size: 0.95rem;
++  font-weight: 500;
++  padding: 12px 28px;
++  border-radius: 999px;
++  transition: opacity 0.15s;
++}
++
++.join-btn:hover {
++  opacity: 0.85;
++}
++
+ .countdown-state {
+-    /* border:1px solid red; */
+-    display: flex;
+-    flex-direction: column;
+-    align-items: center;
+-    justify-content: space-around;
+-    gap: 1.5rem;
+-    width: 60%;
+-    height:50%;
+-    border-radius: 50px;
+-    /* softened white with blur for frosted-glass effect */
+-    background-color: rgba(163, 163, 163, 0.6);
+-    -webkit-backdrop-filter: blur(8px);
+-    backdrop-filter: blur(8px);
+-    /* optional subtle shadow to lift the panel */
+-    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+-    
++  display: flex;
++  flex-direction: column;
++  align-items: center;
++  justify-content: center;
++  gap: 1.5rem;
++  width: 100%;
++  max-width: 760px;
++  padding: 2rem 1.25rem;
++  border-radius: 50px;
++  background-color: rgba(163, 163, 163, 0.6);
++  -webkit-backdrop-filter: blur(8px);
++  backdrop-filter: blur(8px);
++  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+ }
+ 
+ .next-label {
+-    font-size: 0.85rem;
+-    font-weight: 600;
+-    letter-spacing: 0.15em;
+-    text-transform: uppercase;
+-    color: blue;
+-    margin: 0;
++  font-size: 0.85rem;
++  font-weight: 600;
++  letter-spacing: 0.15em;
++  text-transform: uppercase;
++  color: blue;
++  margin: 0;
+ }
+ 
+-.countdown-state {
+-    display: flex;
+-    flex-direction: column;
+-    align-items: center;
+-    justify-content: center;
+-    gap: 1.5rem;
+-    width: 80%;
+-    padding: 2rem 0;
+-  }
+-  
+-  .next-label {
+-    font-size: 0.85rem;
+-    font-weight: 600;
+-    letter-spacing: 0.15em;
+-    text-transform: uppercase;
+-    color: blue;
+-    margin: 0;
++.countdown-units {
++  display: flex;
++  flex-wrap: wrap;
++  align-items: center;
++  justify-content: center;
++  gap: 16px;
++  width: 100%;
++}
++
++.unit {
++  display: flex;
++  flex-direction: column;
++  align-items: center;
++  gap: 10px;
++}
++
++.unit-card {
++  width: clamp(80px, 17vw, 120px);
++  height: clamp(80px, 17vw, 120px);
++  background: rgb(40, 40, 40);
++  border-radius: 12px;
++  display: flex;
++  align-items: center;
++  justify-content: center;
++  position: relative;
++  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
++}
++
++.unit-card::after {
++  content: '';
++  position: absolute;
++  left: 0;
++  right: 0;
++  top: 50%;
++  height: 1px;
++  background: rgba(0, 0, 0, 0.4);
++}
++
++.unit-num {
++  font-size: clamp(2rem, 4vw, 3.5rem);
++  font-weight: 200;
++  letter-spacing: -0.04em;
++  line-height: 1;
++  color: white;
++  width: 100%;
++  height: 100%;
++  display: flex;
++  align-items: center;
++  justify-content: center;
++}
++
++.unit-label {
++  font-size: 0.65rem;
++  font-weight: 600;
++  letter-spacing: 0.2em;
++  text-transform: uppercase;
++  color: #555;
++}
++
++.unit-sep {
++  font-size: clamp(2rem, 4vw, 3rem);
++  /* border: 1px solid red; */
++  font-weight: 100;
++  color: black;
++  /* line-height: 1; */
++  margin-bottom: 1.5rem;
++}
++
++.also-label {
++  font-size: 1.3rem;
++  color: #fff;
++  margin: 0;
++  text-align: center;
++}
++
++.cnt-blks {
++  width: 100%;
++  max-width: 1100px;
++  display: grid;
++  grid-template-columns: repeat(2, minmax(240px, 1fr));
++  gap: 1.5rem;
++  padding: 0 5%;
++  box-sizing: border-box;
++}
++
++.cnt-blks-cards {
++  min-height: 235px;
++  padding: 2rem;
++  border-radius: 30px;
++  background: #fff;
++  display: flex;
++  flex-direction: column;
++  gap: 1rem;
++  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
++  justify-content: center;
++}
++
++.cnt-blks-cards h2 {
++  margin: 0;
++  font-size: clamp(1.1rem, 2vw, 1.4rem);
++}
++
++.cnt-blks-cards p {
++  margin: 0;
++  line-height: 1.7;
++  font-size: clamp(0.85rem, 1.5vw, 1rem);
++}
++
++.cnt-blks-cards a {
++  display: inline-flex;
++  align-items: center;
++  gap: 0.5rem;
++  text-decoration: none;
++  color: blue;
++  width: auto;
++  min-width: 140px;
++  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
++}
++
++@media (max-width: 900px) {
++  .wl-intro {
++    padding: 4rem 2rem 1rem;
+   }
+-  
+-  .countdown-units {
+-    display: flex;
+-    align-items: flex-start;
+-    justify-content: center;
+-    gap: 16px;
+-    width: 100%;
++
++  .cnt-dwn-timer-blk {
++    min-height: 360px;
++    padding: 2rem;
+   }
+-  
+-  .unit {
+-    display: flex;
+-    flex-direction: column;
+-    align-items: center;
+-    gap: 10px;
++
++  .cnt-blks {
++    grid-template-columns: 1fr;
++    padding: 0 2rem;
+   }
+-  
+-  .unit-card {
+-    width: 100px;
+-    height: 100px;
+-    background: rgb(40, 40, 40);
+-    border-radius: 12px;
+-    display: flex;
+-    align-items: center;
+-    justify-content: center;
+-    position: relative;
+-    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+-    /* border:1px solid red; */
++}
++
++@media (max-width: 640px) {
++  .wl-intro {
++    padding: 3rem 1.25rem 1rem;
+   }
+-  
+-  /* the horizontal divider line across the middle of each card */
+-  .unit-card::after {
+-    content: '';
+-    position: absolute;
+-    left: 0;
+-    right: 0;
+-    top: 50%;
+-    height: 1px;
+-    background: rgba(0, 0, 0, 0.4);
++
++  .wl-heading {
++    font-size: clamp(2.4rem, 10vw, 3.5rem);
+   }
+-  
+-  .unit-num {
+-    font-size: clamp(2.5rem, 5vw, 3.5rem);
+-    font-weight: 200;
+-    letter-spacing: -0.04em;
+-    line-height: 1;
+-    color: white;
+-    font-size: 3em;
+-    /* border:1px solid red; */
+-    width:100%;
+-    height:100%;
+-    display: flex;
+-    align-items: center;
+-    justify-content: center;
++
++  .cnt-dwn-timer-blk {
++    border-radius: 28px;
++    padding: 1.5rem;
+   }
+-  
+-  .unit-label {
+-    font-size: 0.65rem;
+-    font-weight: 600;
+-    letter-spacing: 0.2em;
+-    text-transform: uppercase;
+-    color: #555;
++
++  .countdown-units {
++    gap: 10px;
+   }
+-  
+-  .unit-sep {
+-    font-size: clamp(2rem, 4vw, 3rem);
+-    font-weight: 200;
+-    color: #aaa;
+-    line-height: 1;
+-    margin-top: 20px; /* vertically centers it against the card */
+-    /* border: 1px solid red; */
+-    height:50%
++
++  .unit-card {
++    width: 70px;
++    height: 70px;
+   }
+-  
+-  .also-label {
+-    font-size: 1.3rem;
+-    color: #fff;
+-    margin: 0;
++
++  .cnt-blks {
++    padding: 0 1.25rem;
+   }
+ 
+-  .cnt-blks{
+-    /* border:1px solid red; */
+-    width:90%;
+-    height: 30%;
+-    display: flex;
+-    align-items: center;
+-    justify-content: space-around;
++  .cnt-blks-cards {
++    padding: 1.5rem;
+   }
+ 
+-.cnt-blks-cards{
+-    /* border:1px solid red; */
+-    width:35%;
+-    height:75%;
+-    padding: 2%;
+-    display: flex;
+-    flex-direction: column;
+-    justify-content: space-around;
+-    border-radius: 20px;
+-    background-color: #fff;
+-    box-shadow: 1px 1px 3px ;
++  .wl-timer-sect {
++    gap: 1.5rem;
++  }
+ }
+ 
+-.blk-1 p{
+-
+-    font-size: 19px;
+-}
+ 
+-.blk-1 p:last-child{
+-    margin-bottom: 45px;
++.blk-1 p {
++  font-size: clamp(0.85rem, 1.5vw, 1rem);
+ }
+ 
+-.blk-2 p{
+-    font-size: 18px;
++.blk-2 p {
++  font-size: clamp(0.85rem, 1.5vw, 1rem);
+ }
+ 
+-.blk-2 a{
+-    /* border:1px solid red; */
+-    width:30%;
+-    height:20%;
+-    display: flex;
+-    align-items: center;
+-    justify-content: space-around;
+-    /* padding: 1%; */
+-    color:blue;
+-    text-decoration: none;
+-    font-size: 18px;
+}
++.blk-2 a {
++  display: inline-flex;
++  align-items: center;
++  gap: 0.5rem;
++  color: blue;
++  text-decoration: none;
++  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
++  width: auto;
++  min-width: 140px;
+ }
+\ No newline at end of file
