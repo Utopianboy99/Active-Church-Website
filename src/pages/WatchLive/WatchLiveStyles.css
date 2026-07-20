@@ -1,6 +1,7 @@
 .watch-live-section{
     /* border:1px solid red; */
-    height:200vh
+    height:200vh;
+    overflow:hidden;
 }
 
 .wl-intro {
@@ -295,7 +296,7 @@
 
 .blk-2 a{
     /* border:1px solid red; */
-    width:30%;
+    width:40%;
     height:20%;
     display: flex;
     align-items: center;
