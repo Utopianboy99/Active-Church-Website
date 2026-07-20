@@ -1,7 +1,7 @@
 .hero {
     width: 99vw;
     height: 100vh;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,10 +20,14 @@
     color: red
 }
 
+.drawer-close-btn{
+    display:hidden
+}
+
 .hero-txt-main {
     width: 95%;
     height: 60%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     align-items: end;
 
@@ -583,4 +587,432 @@
     font-size: 2.1em;
     /* border:1px solid red; */
     /* padding: 1% 0px; */
+}
+
+@media (max-width: 1200px) {
+    .hero,
+    .about,
+    .ministries,
+    .connect,
+    .nxt-steps,
+    .giving-sect,
+    .the-2nd-last,
+    .our-pastors {
+        width: 100%;
+        min-height: auto;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .hero-txt-main,
+    .hero-botom,
+    .about div:first-child,
+    .min-div-one,
+    .min-div-two,
+    .count-left-mid,
+    .st-divs,
+    .give-divs,
+    .left,
+    .mid-box {
+        width: 100%;
+    }
+
+    .hero-txt-main h1 {
+        font-size: clamp(3.5rem, 6vw, 5.5rem);
+    }
+
+    .hero-btm-text p {
+        font-size: 1.25rem;
+    }
+
+    .hero-btm-btns {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .hero-btm-btns a {
+        width: auto;
+        min-width: 160px;
+        padding: 1rem 1.25rem;
+    }
+
+    .about h1,
+    .head-box h1,
+    .st-div-h1,
+    .give-heading,
+    .min-box-h1,
+    .intro {
+        font-size: clamp(2.5rem, 5vw, 4.5rem);
+    }
+
+    .bout-elvine {
+        position: relative;
+        left: 0;
+        width: 100%;
+        height: 320px;
+        margin-top: 2rem;
+    }
+
+    .nxt-steps {
+        flex-direction: column;
+        height: auto;
+        padding-top: 2rem;
+        gap: 2rem;
+    }
+
+    .st-divs {
+        width: 100%;
+        height: auto;
+        margin-bottom: 0;
+    }
+
+    .st-div-left {
+        width: 100%;
+        min-height: 320px;
+    }
+
+    .left-float-div {
+        position: static;
+        width: 90%;
+        height: auto;
+        margin: -2rem auto 0;
+        padding: 1.5rem;
+    }
+
+    #side-div {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    #right,
+    #left {
+        width: 100%;
+        height: auto;
+    }
+
+    #right {
+        min-height: 320px;
+    }
+
+    #right-txt-box,
+    .min-box,
+    .left-img {
+        width: 100%;
+    }
+
+    .min-box {
+        flex-direction: row;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .min-box-img {
+        width: 22%;
+        min-width: 100px;
+        height: 100px;
+    }
+
+    .day-times,
+    .mid-box-btns {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .st-divs,
+    .st-divs.right,
+    .give-divs,
+    .mid-box,
+    .our-pastors {
+        width: 100%;
+    }
+
+    .st-divs-right a,
+    .mid-box-btns a {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .giving-sect,
+    .the-2nd-last,
+    .our-pastors {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
+}
+
+@media (max-width: 900px) {
+    .hero {
+        min-height: auto;
+        padding: 3rem 1rem;
+    }
+
+    .about,
+    .ministries,
+    .connect,
+    .nxt-steps,
+    .giving-sect,
+    .the-2nd-last,
+    .our-pastors {
+        padding: 2rem 1rem;
+    }
+
+    .connect-h1,
+    .blue,
+    .st-div-p2,
+    .ps-txt,
+    .give-head-txt {
+        font-size: clamp(1rem, 2vw, 1.4rem);
+    }
+
+    .count-left-mid,
+    .day-times,
+    .mid-box-btns {
+        gap: 1rem;
+    }
+
+    .mid-cards {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero-txt-main h1,
+    .about h1,
+    .head-box h1,
+    .st-div-h1,
+    .give-heading,
+    .min-box-h1,
+    .intro {
+        font-size: clamp(2.25rem, 10vw, 3.5rem);
+    }
+
+    .hero {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin: 0;
+        padding-bottom: 40px;
+        justify-content: center;
+    }
+
+    .hero-txt-main h1 {
+        line-height: 1.2;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 1.8em;
+    }
+
+    .hero-botom {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        gap: 1rem;
+    }
+
+    .hero-btm-text {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-btm-btns {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    .hero-btm-btns a {
+        width: auto;
+        min-width: 160px;
+        padding: 0.75rem 1.25rem;
+        font-size: 0.95rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-btm-btns a:last-child {
+        color: white;
+    }
+
+    .abt-containor-div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .abt-containor-div h1 {
+        font-size: 1.6em;
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+
+    .abt-containor-div span {
+        font-size: 1em;
+    }
+
+    .min-div-one {
+        height: auto;
+    }
+
+    .head-box {
+        font-size: 1em;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .head-box a {
+        width: auto;
+        min-width: 160px;
+        padding: 0.5rem 1rem;
+    }
+
+    .connect {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    #top {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.75rem;
+    }
+
+    .connect-h1 {
+        margin: 0;
+    }
+
+    #top a {
+        padding: 0.5rem 1rem;
+        width: auto;
+        min-width: 140px;
+        height: auto;
+    }
+
+    #right-txt-box {
+        margin: 15px 0px;
+        height: auto;
+        padding: 20px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    #ths-week {
+        font-size: 1em;
+        width: auto;
+        padding: 0.25rem 0.75rem;
+    }
+
+    #right-txt-box h2 {
+        font-size: 1.5em;
+    }
+
+    #locate {
+        font-size: 0.8em;
+    }
+
+    .min-box {
+        width: 100%;
+        height: auto;
+        min-height: 100px;
+        overflow: hidden;
+        margin: 10px 0px;
+    }
+
+    .min-box-img {
+        width: 80px;
+        height: 80px;
+        flex-shrink: 0;
+    }
+
+    .min-box-txt h4 {
+        font-size: 1em;
+    }
+
+    .min-box-txt p {
+        font-size: 14px;
+    }
+
+    .st-div-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-float-div {
+        position: static;
+        width: min(220px, 90%);
+        min-height: 180px;
+        margin: -2rem auto 0;
+        padding: 1.25rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #d8d8d8;
+        border-radius: 30px;
+        background-color: rgba(255, 255, 255, 0.96);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+        backdrop-filter: blur(4px);
+        z-index: 1;
+    }
+
+    .st-div-left {
+        background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.2)), url('/sashKayla.png');
+    }
+
+    .serve-times {
+        width: 100%;
+        gap: 0.75rem;
+    }
+
+    .day-times {
+        width: 100%;
+        justify-content: space-between;
+        gap: 0.5rem;
+    }
+
+    .Sn-tim, .fr-tim {
+        width: 100%;
+        font-size: 0.95rem;
+        line-height: 1.4;
+    }
+
+    .right {
+        height: auto;
+    }
+
+    .hero-botom,
+    .head-box,
+    .count-left-mid,
+    .day-times,
+    .mid-box-btns {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-btm-btns a,
+    .mid-box-btns a {
+        width: 100%;
+    }
+
 }

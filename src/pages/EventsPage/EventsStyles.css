@@ -1,80 +1,87 @@
 .events-page {
-    background-color: #eae9e4;
-    color: #ffffff;
-    min-height: 100vh;
+  background-color: #eae9e4;
+  color: #ffffff;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.events-page *,
+.events-page *::before,
+.events-page *::after {
+  box-sizing: border-box;
 }
 
 
 .events-intro {
-    padding: 5rem 1rem 1rem;
-    /* border-bottom: 1px solid #1c1c1c; */
+  padding: 5rem 1rem 1rem;
+  /* border-bottom: 1px solid #1c1c1c; */
 }
 
 .events-intro__inner {
-    width: 99%;
-    /* border:1px solid red; */
-    margin-left: 4.5%;
+  width: 99%;
+  /* border:1px solid red; */
+  margin-left: 4.5%;
 }
 
 .events-eyebrow {
-    display: inline-block;
-    font-size: 0.68rem;
-    font-weight: 600;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: blue;
-    margin-bottom: 1.25rem;
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: blue;
+  margin-bottom: 1.25rem;
 }
 
 .events-heading {
-    font-size: clamp(3rem, 8vw, 6rem);
-    font-weight: 300;
-    letter-spacing: -0.03em;
-    line-height: 1;
-    margin: 0 0 1.5rem;
-    color: black;
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 300;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin: 0 0 1.5rem;
+  color: black;
 }
 
 .events-subheading {
-    font-size: 1.05rem;
-    color: black;
-    line-height: 1.7;
-    max-width: 540px;
-    margin: 0 0 2.5rem;
+  font-size: 1.05rem;
+  color: black;
+  line-height: 1.7;
+  max-width: 540px;
+  margin: 0 0 2.5rem;
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~ Event Page ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* The outer section is TALL — this is what gives scroll "budget" */
 .events-cards-sect {
-  position: relative;
-  height: 150vh; /* 4 cards × 100vh of scroll room */
-  padding: 0 5%;
-  box-sizing: border-box;
+position: relative;
+height: 150vh; /* 4 cards × 100vh of scroll room */
+padding: 0 5%;
+box-sizing: border-box;
 }
 
 .cards-sticky-wrapper {
-  position: sticky;
-  top: 0;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  /* border:1px solid red; */
+position: sticky;
+top: 0;
+height: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+overflow: hidden;
+/* border:1px solid red; */
 }
 
 .event-cards {
-  width: 90%;
-  height: 30%;
-  border-radius: 30px;
-  position: absolute;
-  left: 5%;
-  transform-origin: top center;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  /* border:1px solid red; */
+width: 90%;
+height: 30%;
+border-radius: 30px;
+position: absolute;
+left: 5%;
+transform-origin: top center;
+overflow: hidden;
+display: flex;
+align-items: center;
+/* border:1px solid red; */
 }
 
 .event-cards:nth-child(1) { z-index: 1; background-color: #fff;}
@@ -84,66 +91,146 @@
 
 /* Card content styles */
 .card-img {
-  width: 30%;
-  height: 100%;
-  /* background: rgba(255, 255, 255, 0.07); */
-  border-radius: 24px;
-  flex-shrink: 0;
+width: 30%;
+height: 100%;
+/* background: rgba(255, 255, 255, 0.07); */
+border-radius: 24px;
+flex-shrink: 0;
 }
 
 .img-one{
-    background-image: url('/rory.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+  background-image: url('/rory.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .img-two{
-    background-image: url('/rory.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+  background-image: url('/rory.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .img-three{
-    background-image: url('/elvine.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+  background-image: url('/elvine.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .img-four{
-    background-image: url('/rory.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+  background-image: url('/rory.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 
 
 .card-detail {
-  padding: 2rem;
-  color: black;
+padding: 2rem;
+color: black;
 }
 
 .card-heading {
-  font-size: 1.8rem;
-  font-weight: 400;
-  margin: 0 0 1rem;
+font-size: 1.8rem;
+font-weight: 400;
+margin: 0 0 1rem;
 }
 
 .card-tym-vnu {
-  display: flex;
-  gap: 1.5rem;
+display: flex;
+gap: 1.5rem;
 }
 
 .time, .venue {
-  font-size: 0.9rem;
-  /* color: rgba(255, 255, 255, 0.55); */
-  color:black;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  /* border:1px solid red; */
-  /* width:90% */
+font-size: 0.9rem;
+/* color: rgba(255, 255, 255, 0.55); */
+color:black;
+margin: 0;
+display: flex;
+align-items: center;
+/* border:1px solid red; */
+/* width:90% */
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~ Responsive ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+@media (max-width: 1024px) {
+  .card-detail {
+    padding: 1.25rem;
+  }
+
+  .card-heading {
+    font-size: 1.5rem;
+  }
+}
+
+/* Below this width the scroll-jacked "stacked cards" effect gets hard to
+   read and control on touch devices, so it switches to a normal, static
+   stacked list instead of absolutely-positioned cards. */
+@media (max-width: 768px) {
+  .events-intro {
+    padding: 3.5rem 1rem 1rem;
+  }
+
+  .events-intro__inner {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .events-cards-sect {
+    height: auto;
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .cards-sticky-wrapper {
+    position: static;
+    height: auto;
+    overflow: visible;
+    gap: 1.25rem;
+  }
+
+  .event-cards {
+    position: static;
+    width: 100%;
+    height: auto;
+    min-height: 220px;
+    flex-direction: column;
+    align-items: stretch;
+    margin-bottom: 1.25rem;
+    transform: none !important;
+  }
+
+  .card-img {
+    width: 100%;
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .events-heading {
+    font-size: clamp(2.25rem, 10vw, 3.5rem);
+  }
+
+  .events-subheading {
+    max-width: 100%;
+  }
+
+  .card-tym-vnu {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .card-heading {
+    font-size: 1.3rem;
+  }
+
+  .card-detail {
+    padding: 1rem;
+  }
 }

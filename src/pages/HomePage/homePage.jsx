@@ -18,11 +18,22 @@ function HomePage() {
     <>
       <Navbar />
       <main className="home-page">
-        <section className="hero">
+        <section className="hero" style={{ position: 'relative', overflow: 'hidden' }}>
+          <video
+            className="bg-video"
+            src="/bgvideo.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0 }}
+          />
           <div className='hero-txt-main'>
             <h1>
               Welcome to <br />
-              The Active Church
+              The Active <br />
+              Church
             </h1>
           </div>
           <div className='hero-botom'>
@@ -46,7 +57,7 @@ function HomePage() {
         </section>
 
         <section className="about">
-          <div>
+          <div className='abt-containor-div'>
 
             <h1>
               We are a nation within the <br />

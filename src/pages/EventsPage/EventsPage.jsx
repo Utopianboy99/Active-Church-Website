@@ -12,50 +12,36 @@ function EventsPage() {
 
   useEffect(() => {
     const section = sectionRef.current
+    if (!section) return
+
     const cards = Array.from(section.querySelectorAll('.event-cards'))
     const CARDS = cards.length
-    const STACK_TOP = 80   // px from top when fully stacked
-    const CARD_GAP = 18    // px between stacked cards
+    const CARD_GAP = 18
 
     const onScroll = () => {
       const rect = section.getBoundingClientRect()
-      const sectionHeight = section.offsetHeight - window.innerHeight
-
-      // progress: 0 (section just entered) → 1 (section about to leave)
+      const sectionHeight = Math.max(1, section.offsetHeight - window.innerHeight)
       const rawProgress = Math.max(0, Math.min(1, -rect.top / sectionHeight))
 
       cards.forEach((card, i) => {
-        // Each card gets its own slice of the scroll progress
-        // Card 0 is always visible first, card 3 comes in last
-        const cardStart = i / CARDS          // when this card starts moving
-        const cardEnd = (i + 1) / CARDS      // when this card is fully stacked
+        const cardStart = i / CARDS
+        const cardProgress = Math.max(0, Math.min(1, (rawProgress - cardStart) / (1 / CARDS)))
 
-        // How far along is THIS card's animation (0 → 1)
-        const cardProgress = Math.max(
-          0,
-          Math.min(1, (rawProgress - cardStart) / (1 / CARDS))
-        )
-
-        // Start position: card 0 starts on screen, rest start below viewport
-        const startY = i === 0 ? 0 : window.innerHeight * 0.6
-        // End position: tight stack
+        const startY = i === 0 ? 0 : window.innerHeight * 0.25
         const endY = i * CARD_GAP
-
         const currentY = startY + (endY - startY) * cardProgress
 
-        // Slight scale-down for cards underneath
         const scaleDown = 1 - (CARDS - 1 - i) * 0.02 * cardProgress
         const scale = i === CARDS - 1 ? 1 : scaleDown
 
-        card.style.transform = `translateY(${currentY}px) scale(${scale})`
-
-        // Fade in as each card enters
+        card.style.top = `${currentY}px`
+        card.style.transform = `translateX(-50%) scale(${scale})`
         card.style.opacity = i === 0 ? 1 : Math.min(1, cardProgress * 3)
       })
     }
 
     window.addEventListener('scroll', onScroll, { passive: true })
-    onScroll() // run on mount to set initial positions
+    onScroll()
 
     return () => window.removeEventListener('scroll', onScroll)
   }, [])

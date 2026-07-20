@@ -305,3 +305,55 @@
     text-decoration: none;
     font-size: 18px;
 }
+
+@media (max-width: 900px) {
+  .wl-intro {
+    padding: 4rem 2rem 1rem;
+  }
+
+  .cnt-dwn-timer-blk {
+    min-height: 360px;
+    padding: 2rem;
+  }
+
+  .cnt-blks {
+    grid-template-columns: 1fr;
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .wl-intro {
+    padding: 3rem 1.25rem 1rem;
+  }
+
+  .wl-heading {
+    font-size: clamp(2.4rem, 10vw, 3.5rem);
+  }
+
+  .cnt-dwn-timer-blk {
+    border-radius: 28px;
+    padding: 1.5rem;
+  }
+
+  .countdown-units {
+    gap: 10px;
+  }
+
+  .unit-card {
+    width: 70px;
+    height: 70px;
+  }
+
+  .cnt-blks {
+    padding: 0 1.25rem;
+  }
+
+  .cnt-blks-cards {
+    padding: 1.5rem;
+  }
+
+  .wl-timer-sect {
+    gap: 1.5rem;
+  }
+}
