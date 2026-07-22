@@ -20,7 +20,7 @@ nav{
 
 
 .drawer-close-btn{
-    display:hidden
+    display:none ;
 }
 
 .mobile-backdrop{
@@ -360,6 +360,10 @@ footer{
         min-width: unset;
         gap: 0.45rem 0;
         font-size: 0.95rem;
+    }
+
+    .drawer-close-btn{
+        display:block ;
     }
 
     #nav-links a {
