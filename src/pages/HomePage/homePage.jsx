@@ -199,7 +199,7 @@ function HomePage() {
             </div>
 
           </div>
-          <div className="st-divs right">
+          <div className="st-divs belong-right">
             <div className="st-divs-right">
 
               <p className='blue'>YOUR NEXT STEP</p>
@@ -230,7 +230,7 @@ function HomePage() {
             <p className='give-head-txt blue p1'>WAYS TO GIVE</p>
             <h1 className='give-heading'>
               <span className='blue '>Support Our</span>
-              <br />
+              {/* <br /> */}
               Vision
             </h1>
             <div className="give-blue-div">
@@ -240,9 +240,9 @@ function HomePage() {
                 use the bank details below:
               </p>
               <div className="bank-details">
-                <p><b>Bank Name :</b> Nedbank </p>
-                <p><b>Account Name :</b> Active Church</p>
-                <p><b>Account Number :</b>  1385041315</p>
+                <p><b className="blues white">Bank Name :</b> Nedbank </p>
+                <p><b className="blues white" >Account Name :</b> Active Church</p>
+                <p><b className="blues white" >Account Number :</b>  1385041315</p>
               </div>
               <p>
                 Kindly use your name as the <br /> payment reference.
@@ -285,10 +285,11 @@ function HomePage() {
 
         <section className='our-pastors'>
 
-          <div>
+          <div className='pastors-head'>
             <h1 className='intro'>
-              Meet
-              <span className="blue">Our Senior</span><br />
+              Meet 
+              <span className="blue"> Our Senior</span>
+              <br />
               <b>Pastors</b>
             </h1>
           </div>
