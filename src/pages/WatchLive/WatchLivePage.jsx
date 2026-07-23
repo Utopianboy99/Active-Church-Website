@@ -131,7 +131,7 @@ export default function WatchLivePage() {
                   </div>
                   {otherService && (
                     <p className="also-label">
-                      Also streaming: {otherService.label} at {otherService.displayTime}
+                      Also streaming: <br/> {otherService.label} at {otherService.displayTime}
                     </p>
                   )}
                 </div>

@@ -218,6 +218,7 @@ align-items: center;
 @media (max-width: 480px) {
   .events-heading {
     font-size: clamp(2.25rem, 10vw, 3.5rem);
+    overflow:hidden
   }
 
   .events-subheading {

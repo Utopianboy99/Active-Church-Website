@@ -423,6 +423,7 @@
 
   .sermons-heading {
     font-size: clamp(2.5rem, 10vw, 4.2rem);
+    overflow:hidden;
   }
 
   .sermons-subheading {
