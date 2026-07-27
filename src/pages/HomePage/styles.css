@@ -20,9 +20,9 @@
     color: red
 }
 
-.drawer-close-btn{
+/* .drawer-close-btn{
     display:hidden
-}
+} */
 
 .hero-txt-main {
     width: 95%;
@@ -63,7 +63,7 @@
 .hero-btm-btns {
     width: 35%;
     height: 30%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -126,7 +126,7 @@
     position: absolute;
     left: 55%;
     border-radius: 20px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.55)), url('elvine.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.55)), url('/elvine.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -248,7 +248,7 @@
     /* align-items: end; */
     justify-content: end;
     border-radius: 30px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.55)), url('rory.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.55)), url('/rory.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
