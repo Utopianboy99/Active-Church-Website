@@ -294,7 +294,7 @@ function HomePage() {
             </h1>
           </div>
           <div className='pastors'></div>
-          <div className='ps-txt'>
+          <div className='  '>
             <p>Our Amazing Senior Pastors</p>
             <p><b>Pastor Gavin Enslin & Pastor Vicky Enslin</b></p>
           </div>

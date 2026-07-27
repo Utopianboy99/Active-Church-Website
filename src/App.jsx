@@ -9,11 +9,13 @@ import ConnectPage from './pages/ConnectPage/ConnectPage'
 function App() {
   return (
       <Routes>
+        
         <Route path="/" element={<HomePage />} />
         <Route path="/sermons" element={<SermonsPage />} />
         <Route path="/events" element={<EventsPage />} />
         <Route path="/watch-live" element={<WatchLivePage />} />
         <Route path="/connect" element={<ConnectPage />} />
+        
       </Routes>
   )
 }

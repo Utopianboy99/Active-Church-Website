@@ -20,7 +20,7 @@ nav{
 
 
 .drawer-close-btn{
-    display:none ;
+    display:none !important;
 }
 
 .mobile-backdrop{
