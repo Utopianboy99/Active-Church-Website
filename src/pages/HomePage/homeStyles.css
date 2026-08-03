@@ -12,6 +12,11 @@
     background-color: #eae9e4;
 }
 
+h1, h2, h3 {
+    overflow-wrap: break-word;
+    max-width: 100%;
+}
+
 .blue {
     color: blue
 }
@@ -34,7 +39,7 @@
 }
 
 .hero-txt-main h1 {
-    font-size: 6em;
+    font-size: clamp(2.5rem, 5vw, 5.5rem);
 }
 
 .hero-botom {
@@ -56,7 +61,7 @@
 }
 
 .hero-btm-text p {
-    font-size: 1.5em;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
 }
 
 
@@ -114,7 +119,7 @@
 }
 
 .about h1 {
-    font-size: 4.5em;
+    font-size: clamp(2rem, 4vw, 4.5rem);
     z-index: 1;
 
 }
@@ -187,7 +192,7 @@
 }
 
 .head-box h1 {
-    font-size: 3em;
+    font-size: clamp(1.75rem, 3vw, 3rem);
 }
 
 .head-box a {
@@ -277,7 +282,7 @@
 }
 
 #right-txt-box h2 {
-    font-size: 2.5em;
+    font-size: clamp(1.4rem, 2.4vw, 2.5rem);
 
 }
 
@@ -287,7 +292,7 @@
     /* border: 1px solid red; */
     display: flex;
     justify-content: space-between;
-    font-size: 1.3em;
+    font-size: clamp(0.95rem, 1.3vw, 1.3rem);
 }
 
 #left {
@@ -415,11 +420,11 @@
 }
 
 .st-div-h1{
-    font-size: 5em;
+    font-size: clamp(2.5rem, 4vw, 5rem);
 }
 
 .st-div-p2{
-    font-size: 1.5em;
+    font-size: clamp(1rem, 1.6vw, 1.5rem);
 }
 
 .st-divs-right a{
@@ -483,7 +488,7 @@
 }
 
 .give-blue-div{
-    font-size: 1.7em;
+    font-size: clamp(1rem, 1.8vw, 1.7rem);
     color:white;
     background-color: blue;
     padding: 0 4%;
@@ -510,7 +515,7 @@
 }
 
 .min-box-h1{
-    font-size: 7.5em;
+    font-size: clamp(2.5rem, 6vw, 7rem);
     text-align: center;
 }
 
@@ -520,7 +525,7 @@
 }
 
 .min-box-p{
-    font-size: 2em;
+    font-size: clamp(1rem, 2vw, 2rem);
     margin: 10px 0px;
 }
 
@@ -583,7 +588,7 @@
 }
 
 .intro{
-    font-size: 6em;
+    font-size: clamp(2.5rem, 5vw, 5.5rem);
 }
 
 .pastors{
@@ -598,7 +603,7 @@
 }
 
 .ps-txt{
-    font-size: 2.1em;
+    font-size: clamp(1.05rem, 2vw, 2.1rem);
     /* border:1px solid red; */
     /* padding: 1% 0px; */
 }
@@ -764,6 +769,12 @@
         align-items: center;
     }
 }
+
+@media (min-width: 901px) {
+    .drawer-close-btn{
+      display: none !important;
+    }
+  }
 
 @media (max-width: 900px) {
     .hero {

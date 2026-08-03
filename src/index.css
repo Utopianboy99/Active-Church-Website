@@ -1,3 +1,12 @@
 body {
   background-color: #eae9e4;
+  /* font-family: 'Inter', sans-serif; */
+}
+
+body, p, a, button {
+  font-family: 'Source Sans 3', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
 }

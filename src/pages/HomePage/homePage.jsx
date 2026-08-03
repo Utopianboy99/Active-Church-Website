@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from '../../components/navbar'
 import Footer from '../../components/footer'
 import { Link } from 'react-router-dom'
-import './styles.css'
+import './homeStyles.css'
 import ArrowRightOutlineIcon from '@iconify-react/solar/arrow-right-outline';
 import CalendarIcon from '@iconify-react/iconoir/calendar';
 import PinLineIcon from '@iconify-react/si/pin-line';
