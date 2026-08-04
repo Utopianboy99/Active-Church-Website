@@ -298,7 +298,7 @@
 }
 
 .blk-2 a{
-    border:1px solid red;
+    /* border:1px solid red; */
     width:53%;
     height:20%;
     display: flex;
