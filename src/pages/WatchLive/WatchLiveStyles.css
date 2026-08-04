@@ -24,13 +24,14 @@
     text-transform: uppercase;
     color: blue;
     margin-bottom: 1.25rem;
+    /* border:1px solid red; */
 }
 
 .wl-heading {
     font-size: clamp(3rem, 8vw, 6rem);
     font-weight: 300;
     letter-spacing: -0.03em;
-    line-height: 1;
+    /* line-height: 1; */
     margin: 0 0 1.5rem;
     color: black;
 }
@@ -297,8 +298,8 @@
 }
 
 .blk-2 a{
-    /* border:1px solid red; */
-    width:40%;
+    border:1px solid red;
+    width:53%;
     height:20%;
     display: flex;
     align-items: center;

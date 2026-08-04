@@ -375,10 +375,16 @@ h1, h2, h3 {
     flex-direction: column;
     /* align-items: center; */
     padding: 1.9%;
+    /* border:1px solid red; */
+}
+
+.left-float-div h3{
+    /* border:1px solid red; */
+    height:15%
 }
 
 .serve-times{
-    width:95%;
+    width:100%;
     height: 90%;
     /* border:1px solid red; */
     display: flex;

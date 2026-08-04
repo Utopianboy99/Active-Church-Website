@@ -37,7 +37,7 @@
   font-size: clamp(3rem, 8vw, 6rem);
   font-weight: 300;
   letter-spacing: -0.03em;
-  line-height: 1;
+  /* line-height: 1; */
   margin: 0 0 1.5rem;
   color: black;
 }
