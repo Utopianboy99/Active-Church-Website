@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react'
+import { Helmet } from 'react-helmet-async'
 import './EventsStyles.css'
 import Navbar from '../../components/navbar'
 import Footer from '../../components/footer'
@@ -48,6 +49,14 @@ function EventsPage() {
 
   return (
     <>
+      <Helmet>
+        <title>Events | The Active Church, Johannesburg</title>
+        <meta name="description" content="Explore upcoming gatherings, services, and community events at The Active Church in Johannesburg." />
+        <link rel="canonical" href="https://theactivechurch.org/events" />
+        <meta property="og:title" content="Events at The Active Church" />
+        <meta property="og:image" content="https://theactivechurch.org/og-events.jpg" />
+      </Helmet>
+
       <Navbar />
 
       <section className="events-intro">

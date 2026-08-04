@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet-async'
 import Navbar from '../../components/navbar'
 import Footer from '../../components/footer'
 import './ConstactStyles.css'
@@ -13,6 +14,14 @@ import SendIcon from '@iconify-react/mynaui/send';
 function ConnectPage() {
   return (
     <>
+      <Helmet>
+        <title>Connect | The Active Church, Johannesburg</title>
+        <meta name="description" content="Get in touch with The Active Church in Johannesburg. Find our address, service times, and send us a message." />
+        <link rel="canonical" href="https://theactivechurch.org/connect" />
+        <meta property="og:title" content="Connect with The Active Church" />
+        <meta property="og:image" content="https://theactivechurch.org/og-connect.jpg" />
+      </Helmet>
+
       <Navbar />
       <section className="contactsect">
         <div className="dividers">

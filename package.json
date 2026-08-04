@@ -24,8 +24,10 @@
     "@iconify-react/subway": "^1.0.2",
     "@iconify/css-react": "^1.0.2",
     "@mui/material": "^9.1.0",
+    "ffmpeg": "^0.0.4",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
+    "react-helmet-async": "^3.0.0",
     "react-router": "^7.17.0",
     "react-router-dom": "^7.17.0"
   },

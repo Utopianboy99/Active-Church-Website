@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet-async'
 import Navbar from '../../components/navbar'
 import Footer from '../../components/footer'
 import { Link } from 'react-router-dom'
@@ -16,12 +17,20 @@ import SermonsCarousel from '../SermonCarousel/Sermonscarousel'
 function HomePage() {
   return (
     <>
+      <Helmet>
+        <title>The Active Church | Johannesburg</title>
+        <meta name="description" content="Welcome to The Active Church in Johannesburg. Join our Sunday and Friday services, watch live, and explore sermons, events, and ways to give." />
+        <link rel="canonical" href="https://theactivechurch.org/" />
+        <meta property="og:title" content="The Active Church | Johannesburg" />
+        <meta property="og:image" content="https://theactivechurch.org/og-home.jpg" />
+      </Helmet>
+
       <Navbar />
       <main className="home-page">
         <section className="hero" style={{ position: 'relative', overflow: 'hidden' }}>
           <video
             className="bg-video"
-            src="/bgvideo.mp4"
+            src="/bgvideo-compressed.mp4"
             autoPlay
             muted
             loop
@@ -294,7 +303,7 @@ function HomePage() {
             </h1>
           </div>
           <div className='pastors'></div>
-          <div className='  '>
+          <div className='ps-txt'>
             <p>Our Amazing Senior Pastors</p>
             <p><b>Pastor Gavin Enslin & Pastor Vicky Enslin</b></p>
           </div>

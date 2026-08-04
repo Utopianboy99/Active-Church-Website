@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Helmet } from 'react-helmet-async'
 import Navbar from '../../components/navbar'
 import Footer from '../../components/footer'
 import './WatchLiveStyles.css'
@@ -69,6 +70,14 @@ export default function WatchLivePage() {
 
   return (
     <>
+      <Helmet>
+        <title>Watch Live | The Active Church, Johannesburg</title>
+        <meta name="description" content="Watch The Active Church services live online from Johannesburg. Join our Sunday and Friday gatherings from anywhere." />
+        <link rel="canonical" href="https://theactivechurch.org/watch-live" />
+        <meta property="og:title" content="Watch Live at The Active Church" />
+        <meta property="og:image" content="https://theactivechurch.org/og-watch-live.jpg" />
+      </Helmet>
+
       <Navbar />
 
       <section className="watch-live-section">

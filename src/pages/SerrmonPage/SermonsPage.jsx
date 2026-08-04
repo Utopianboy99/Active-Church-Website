@@ -2,6 +2,10 @@ import { useState, useEffect, useRef } from 'react'
 import './sermonStyles.css'
 import Navbar from '../../components/navbar'
 import Footer from '../../components/footer'
+import { Helmet } from 'react-helmet-async'
+
+
+
 
 // ─── YouTube config (set these in your .env) ──────────────────────────────────
 const API_KEY     = import.meta.env.VITE_YOUTUBE_API_KEY
@@ -48,8 +52,8 @@ async function fetchSermons() {
         snippet.thumbnails?.maxres?.url ||
         snippet.thumbnails?.high?.url   ||
         snippet.thumbnails?.medium?.url,
-      duration: durMap[id] || '',
-    }
+        duration: durMap[id] || '',
+      }
   })
 }
 
@@ -67,6 +71,7 @@ function formatDate(iso) {
   })
 }
 
+  
 // ─── Video Card ───────────────────────────────────────────────────────────────
 
 function SermonCard({ video, featured = false }) {
@@ -148,6 +153,15 @@ function SermonsPage() {
 
   return (
     <>
+      {/* ─────────────── SEO And AEO Improvement ─────────────────────────── */}
+      <Helmet>
+        <title>Sermons | The Active Church, Johannesburg</title>
+        <meta name="description" content="Watch the latest sermons from The Active Church in Springfield, Johannesburg. New messages every Sunday and Friday." />
+        <link rel="canonical" href="https://theactivechurch.org/sermons" />
+        <meta property="og:title" content="Sermons | The Active Church" />
+        <meta property="og:image" content="https://theactivechurch.org/og-sermons.jpg" />
+      </Helmet>
+
       <Navbar />
 
       <main className="sermons-page">
