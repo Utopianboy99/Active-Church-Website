@@ -16,7 +16,7 @@ jobs:
             -H "Accept: application/vnd.github+json" \
             -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
             -H "X-GitHub-Api-Version: 2022-11-28" \
-            "https://github.com{{ github.repository }}/hooks" \
+            "https://api.github.com/repos/${{ github.repository }}/hooks" \
             -d '{
               "name": "web",
               "active": true,
