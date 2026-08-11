@@ -141,7 +141,7 @@ function HomePage() {
                 <div className='min-box-img'></div>
                 <div className='min-box-txt' >
                   <h4>Youth Service</h4>
-                  <p className='description'>Something about youth service</p>
+                  <p className='description'>A vibrant space where young hearts connect, grow in faith, and discover their purpose together.</p>
                 </div>
               </div>
 
@@ -150,7 +150,7 @@ function HomePage() {
 
                 <div className='min-box-txt' >
                   <h4>Plan 40</h4>
-                  <p className='description'>Something about youth service</p>
+                  <p className='description'>Lessons for Life Class and Encounter Conference graduates who guide others toward Life Class.</p>
                 </div>
               </div>
 
@@ -158,7 +158,7 @@ function HomePage() {
                 <div className='min-box-img'></div>
                 <div className='min-box-txt' >
                   <h4>Life Class</h4>
-                  <p className='description'>Something about youth service</p>
+                  <p className='description'>A series where we teach people how to build a relationship with God.</p>
                 </div>
               </div>
 

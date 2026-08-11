@@ -327,6 +327,11 @@ h1, h2, h3 {
 
 .min-box-txt{
     width: 75%;
+    /* border:1px solid red; */
+    height:60%;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
 }
 
 
@@ -610,8 +615,9 @@ h1, h2, h3 {
 }
 
 .ps-txt{
-    font-size: clamp(2em, 2vw, 2.5em);
+    font-size: clamp(1.5em, 2vw, 1.7em);
     /* border:1px solid red; */
+    overflow:hidden;
 }
 
 @media (max-width: 1200px) {
@@ -898,10 +904,12 @@ h1, h2, h3 {
     }
     
     .abt-containor-div h1 {
-        font-size: 1.4em;
+        font-size: 1.3em;
         width: 100%;
         height: 51%;
         text-align: center;
+        border:1px solid red;
+        overflow: hidden;
     }
 
     .abt-containor-div span {
@@ -1088,7 +1096,7 @@ h1, h2, h3 {
         padding:0px;
         margin:0px;
         align-items:center;
-        height:30%;
+        height:37%;
     }
 
     .give-heading span{
