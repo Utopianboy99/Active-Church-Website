@@ -919,7 +919,7 @@ h1, h2, h3 {
 
     #right {
         min-height: 320px;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.55)), url('rory.png');
+        background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.55)), url('/public/rory.png');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
