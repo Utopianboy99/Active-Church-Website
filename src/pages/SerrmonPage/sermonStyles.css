@@ -456,4 +456,12 @@
   .sermon-card__body {
     padding: 1rem;
   }
+
+  .cnt-blks{
+    padding:0px 0px !important;
+  }
+
+  .cnt-blks-cards{
+    width:100%;
+  }
 }
