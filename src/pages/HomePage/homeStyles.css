@@ -917,6 +917,14 @@ h1, h2, h3 {
         font-size: 1em;
     }
 
+    #right {
+        min-height: 320px;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.55)), url('rory.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
     .min-div-one {
         height: 20%;
     }
